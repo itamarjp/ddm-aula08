@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             // Remove o '.' e '-' da String
             String str = s.toString()
                     .replaceAll("[.]", "")
-                    .replaceAll("[-]", "");
+                    .replaceAll("[-]",   "");
             // os parâmetros before e after dizem o tamanho
             // anterior e atual da String digitada, se after > before é
             // porque está digitando, caso contrário, está apagando
