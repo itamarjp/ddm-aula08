@@ -47,15 +47,22 @@ public class MainActivity extends AppCompatActivity {
             if (after > before) {
                 // Se tem mais de 5 caracteres (sem máscara)
                 // coloca o '.' e o '-'
-                if (str.length() > 5) {
-                    str = str.substring(0, 2) + '.' +
-                            str.substring(2, 5) + '-' +
-                            str.substring(5);
+
+                    if (str.length() > 9) {
+                    str = str.substring(0, 3) + '.' +
+                            str.substring(3, 6) + '.' +
+                            str.substring(6, 9) + '-' +
+                            str.substring(9);
                     // Se tem mais de 2, coloca só o ponto
-                } else if (str.length() > 2) {
-                    str = str.substring(0, 2) + '.' +
-                            str.substring(2);
+                } else if (str.length() > 6) {
+                    str = str.substring(0, 3) + '.' +
+                    str.substring(3, 6) + '.' +
+                            str.substring(6);
+                } else if (str.length() > 3) {
+                    str = str.substring(0, 3) + '.' +
+                            str.substring(3);
                 }
+
                 // Seta a flag para evitar chamada infinita
                 atualizando = true;
                 // seta o novo texto
